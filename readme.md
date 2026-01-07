@@ -1,15 +1,15 @@
 🏏 Spring Boot CRUD App: Batsman & Team Management
 This is a backend-only Spring Boot application that provides CRUD operations for managing Batsman and Team entities.
-✅ Deployed on Railway: https://lovely-vibrancy-production.up.railway.app
+✅ Deployed on Railway: 
 🔗 Use the above URL to interact with the API endpoints via tools like Postman or cURL.
 
-A Spring Boot application to manage Batsmen and their Teams with full 
+A Spring Boot application to manage Batsmen and their Teams with full
 CRUD operations, validation, error handling, and ready
 integration with both MySQL or H2. This backend is designed for scalability,
 cloud deployment, and enterprise-grade coding practices.
 
-
 📦 Features
+
 - Full CRUD operations for `Batsman` and `Team` entities
 - One-to-many relationship: One `Team` → Many `Batsmen`
 - Validation using Jakarta Bean Validation:
@@ -22,6 +22,7 @@ cloud deployment, and enterprise-grade coding practices.
 - Postman API documentation support
 
 ⚙️ Tech Stack
+
 - Java 17+
 - Spring Boot 3+
 - Spring Web, Spring Data JPA, Validation
@@ -31,6 +32,7 @@ cloud deployment, and enterprise-grade coding practices.
 📬 API Endpoints
 
 🟦 Batsman APIs
+
 - POST   `/batsmen`          → Create new batsman
 - GET    `/batsmen`          → Get all batsmen
 - PUT    `/batsmen/{id}`     → Update batsman by ID
@@ -46,6 +48,7 @@ Sample Batsman Request (POST / PUT):
 }
 
 🟩 Team APIs
+
 - POST   `/teams`            → Create a new team
 - GET    `/teams`            → Get all teams
 - PUT    `/teams/{id}`       → Update team by ID
@@ -67,11 +70,13 @@ Sample Team Request (POST / PUT):
 }
 
 ❗ Validations & Constraints
+
 - `batsmanName`: Not blank, must be unique
 - `battingPosition`: Must be between 1 and 11 inclusive
 - `teamName`: Not blank, must be unique
 
 🚫 Error Handling
+
 - 400: Validation failed → `{ "battingPosition": "Must be <= 11" }`
 - 404: Resource not found → `{ "error": "Team 'MI' not found" }`
 - 409: Duplicate name → `{ "error": "Batsman already exists" }`
@@ -102,6 +107,7 @@ Using Maven:
 ./mvnw spring-boot:run
 
 Using IntelliJ / VSCode:
+
 - Import project as Maven
 - Run DemoApplication.java
 
@@ -118,10 +124,7 @@ pm.test("Status code is 200", function () {
   pm.response.to.have.status(200);
 });
 
-
 👨‍💻 Author
-Parag Yadav  
-Intern : Siemens (Team Mendix Cloud )  
+Parag Yadav
+Intern : Siemens (Team Mendix Cloud )
 GitHub: https://github.com/Paraaag
-
-
